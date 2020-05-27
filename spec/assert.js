@@ -3,14 +3,19 @@ var assert = {
     if (!assertionToCheck) {
       throw new Error("Assertion failed: " + assertionToCheck + " is not truthy");
     }
+    else {
+      console.log("Pass");
+  }
   },
 
   toEq: function(first, second) {
     if (first !== second) {
       throw new Error("Assertion failed: expected " + first + " but got " + second);
     }
+    else {
+      console.log("Pass");
   }
-
+  }
 };
 
 

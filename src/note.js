@@ -7,3 +7,13 @@
 //
 //   exports.Circle = Circle;
 // })(this);
+
+
+class Note {
+
+  constructor() {
+    this.allNotes = [];
+  }
+
+}
+

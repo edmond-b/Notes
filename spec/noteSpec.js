@@ -2,10 +2,10 @@
 // Reference test
 // Writing out first tests
 
-function testCircleRadiusDefaultsTo10() {
-  var circle = new Circle();
-  assert.isTrue(circle.radius === 10);
-};
+// function testCircleRadiusDefaultsTo10() {
+//   var circle = new Circle();
+//   assert.isTrue(circle.radius === 10);
+// };
 
 // function testtest() {
 //   assert.toBe(10, 11);
@@ -15,10 +15,12 @@ function testCircleRadiusDefaultsTo10() {
 // testCircleRadiusDefaultsTo10();
 // testtest();
 
-// function testAllNotesArray() {
-//   var note = new Note();
-//   assert.toEq(note.allnotes, []);
-// };
+function testAllNotesArray() {
+  var note = new Note();
+  assert.toEq(note.allNotes.length,(0));
+}; 
+
+testAllNotesArray();
 
 // function testCreateNoteAddsNote() {
 //   note = new Note;
