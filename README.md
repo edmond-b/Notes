@@ -19,3 +19,15 @@ As a programmer
 So I can see all the information in the note
 I can see the full text of an individual note on its own page
 ```
+
+## Object relations
+| Object | Message |
+| ------ | ------------ |
+| Note   | this.allnotes|
+|        | list[note1,note2,note3]|
+| arg(str) | createNote(arg)|        
+| Note   | abbreviateNote()|
+| Note   | displayNote()|
+
+## DOM
+![domain_model](images/domain_model.png)
