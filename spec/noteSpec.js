@@ -22,8 +22,19 @@ function testAllNotesArray() {
 
 testAllNotesArray();
 
-// function testCreateNoteAddsNote() {
-//   note = new Note;
-//   note.createNote("Test");
-//   assert.toEq(note.allnotes, ["Test"]);
-// };
+function testCreateNoteAddsNote() {
+  var note = new Note;
+  note.createNote("Test");
+  assert.toEq(note.allNotes[0], "Test");
+};
+
+testCreateNoteAddsNote();
+
+
+function testAbbreviatedNotes() {
+  var note = new Note;
+  note.createNote("My name is Andrew and I love Makers Academy, most of the time")
+  assert.toEq(note.abbreviateNote(), "My name is Andrew an...")
+};
+
+testAbbreviatedNotes();

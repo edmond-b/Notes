@@ -15,5 +15,11 @@ class Note {
     this.allNotes = [];
   }
 
-}
+createNote(text){
+    return this.allNotes.push(text)
 
+}
+abbreviateNote() {
+    return this.allNotes[0].substring(0,20) + "..."
+}
+}

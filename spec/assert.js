@@ -10,7 +10,7 @@ var assert = {
 
   toEq: function(first, second) {
     if (first !== second) {
-      throw new Error("Assertion failed: expected " + first + " but got " + second);
+      throw new Error("Assertion failed: got " + first + " expected " + second);
     }
     else {
       console.log("Pass");
