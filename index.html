@@ -6,22 +6,53 @@
   </head>
   <body>
     <form id="createnote" action="#">
-    <textarea id="textBox" cols="50" rows="20">
-      This is where the user can enter text...
-    </textarea>
-    <input type="submit" value="Submit">
+      <textarea id="textBox" cols="50" rows="20">
+        This is where the user can enter text...
+      </textarea><br>
+      <input type="submit" value="Submit">
     </form>
-  </form>
+
+
+    <section>
+      <script>
+        // note.allAbbreviateNotes.forEach(note){
+        //   href=`${note}`
+        // }
+      </script>
+
+      <button onclick="myFunction()">Try it</button><br>
+
+      <!-- "Adnrew..."<br>
+      "Asif..."<br>
+      "Tanil..."<br>
+      "Ed..."<br> -->
+    </section>
+
   </body>
+
 
   <script>
     document.addEventListener('DOMContentLoaded', function(){
       var note = new Note()
+
       document.getElementById("createnote").onsubmit = function() {
-      text = document.getElementById("textBox").value
-      note.createNote(text)
-      var node = document.createTextNode(`${note.allNotes}`)
-      console.log(note.allNotes)
+        text = document.getElementById("textBox").value
+        note.createNote(text)
+        note.abbreviateNote()
+        console.log(note.allNotes)
+        console.log(note.allAbbreviateNotes)
+
+        var btn = document.createElement("BUTTON");
+
+        btn.setAttribute("onclick",(btn.innerHTML = `${note.allAbbreviateNotes[note.allAbbreviateNotes.length - 1]}`))
+        document.body.appendChild(btn);
+
+        // var node = document.createTextNode(`${note.allNotes}`)
+        // var element  = document.createElement('text')
+        // element.setAttribute("href", `${note.allNotes[0]}` )
+        // element.appendChild(node);
+
+        // console.log(node)
       }
     }, false);
   </script>

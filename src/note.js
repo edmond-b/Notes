@@ -10,6 +10,8 @@ createNote(text){
 
 }
 abbreviateNote() {
+  this.allAbbreviateNotes = [];
+
   this.allNotes.forEach(note => {
     this.allAbbreviateNotes.push(note.substring(0,20) + "...")
   })
