@@ -17,14 +17,3 @@ var assert = {
   }
   }
 };
-
-
-
-// function(context)
-//
-//   function expect(first argument){
-//    first argument = first argument;
-//      return assert;
-//    }
-//
-//    this.expect = expect

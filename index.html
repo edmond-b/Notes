@@ -1,13 +1,38 @@
-<!-- Control HTML -->
-<!-- <!DOCTYPE html> -->
-<!-- <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Frontend, single page app</title>
+    <h1>Notes</h1>
   </head>
-
   <body>
-    <a href="#tiger">Tiger</a> |
+    <form id="createnote" action="#">
+    <textarea id="textBox" cols="50" rows="20">
+      This is where the user can enter text...
+    </textarea>
+    <input type="submit" value="Submit">
+    </form>
+  </form>
+  </body>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      var note = new Note()
+      document.getElementById("createnote").onsubmit = function() {
+      text = document.getElementById("textBox").value
+      note.createNote(text)
+      var node = document.createTextNode(`${note.allNotes}`)
+      console.log(note.allNotes)
+      }
+    }, false);
+  </script>
+
+  <script src="src/note.js"></script>
+  <!-- <script src="src/interface.js"></script> -->
+  </html>
+
+
+
+    <!-- <a href="#tiger">Tiger</a> |
     <a href="#lion">Lion</a> |
     <a href="#cheetah">Cheetah</a> |
     <a href="#leopard">Leopard</a>
@@ -34,6 +59,4 @@
           .getElementById("animal")
           .innerHTML = animal;
       };
-    </script>
-  </body>
-</html> -->
+    </script> -->
