@@ -3,11 +3,28 @@ var assert = {
     if (!assertionToCheck) {
       throw new Error("Assertion failed: " + assertionToCheck + " is not truthy");
     }
+    else {
+      console.log("Pass");
+  }
   },
 
-  toBe: function(first, second) {
+  toEq: function(first, second) {
     if (first !== second) {
       throw new Error("Assertion failed: expected " + first + " but got " + second);
     }
+    else {
+      console.log("Pass");
+  }
   }
 };
+
+
+
+// function(context)
+//
+//   function expect(first argument){
+//    first argument = first argument;
+//      return assert;
+//    }
+//
+//    this.expect = expect
