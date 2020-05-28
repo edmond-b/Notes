@@ -5,15 +5,16 @@ class Note {
     this.allAbbreviateNotes = [];
   }
 
-createNote(text){
-    return this.allNotes.push(text)
+  createNote(text){
+      return this.allNotes.push(text)
+  }
 
-}
-abbreviateNote() {
-  this.allAbbreviateNotes = [];
+  abbreviateNote() {
+    this.allAbbreviateNotes = [];
 
-  this.allNotes.forEach(note => {
-    this.allAbbreviateNotes.push(note.substring(0,20) + "...")
-  })
- }
+    this.allNotes.forEach(note => {
+      this.allAbbreviateNotes.push(note.substring(0,20) + "...")
+    })
+  }
+
 }
