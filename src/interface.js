@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', function(){
     var x = document.createElement('LI');
     var textnode = document.createTextNode(`${newnote}`);
 
-    x.setAttribute("href", `#${newnote}`);
-    x.setAttribute("onclick", "Hello");
+    // x.setAttribute("href", `#${newnote}`);
+    x.setAttribute("onclick", "myFunction()");
     x.appendChild(textnode);
     document.getElementById("myList").appendChild(x);
 
@@ -23,15 +23,12 @@ document.addEventListener('DOMContentLoaded', function(){
     console.log("All abbreviated notes:")
     console.log(note.allAbbreviateNotes)
 
-
-
-
-
-    // var node = document.createTextNode(`${note.allNotes}`)
-    // var element  = document.createElement('text')
-    // element.setAttribute("href", `${note.allNotes[0]}` )
-    // element.appendChild(node);
-
-    // console.log(node)
   }
 }, false);
+
+function myFunction() {
+  document.getElementById("textBox").style.visibility = "hidden";
+  document.getElementById("myList").style.visibility = "hidden";
+  document.getElementById("submit").style.visibility = "hidden";
+
+}
