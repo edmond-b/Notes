@@ -30,5 +30,4 @@ function myFunction() {
   document.getElementById("textBox").style.visibility = "hidden";
   document.getElementById("myList").style.visibility = "hidden";
   document.getElementById("submit").style.visibility = "hidden";
-
 }
